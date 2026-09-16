@@ -32,36 +32,32 @@ class AppBottomNav extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-          
+              // 1) Home
               _buildNavItem(
-                context: context,
                 index: 0,
                 label: 'Home',
                 icon: Icons.home_outlined,
                 isImage: false,
               ),
 
-            
+              // 2) Explore (map.png)
               _buildNavItem(
-                context: context,
                 index: 1,
-                label: 'Map',
+                label: 'Explore',           // ← ✏️ اتغيرت من 'Map'
                 iconPath: 'assets/images/map.png',
                 isImage: true,
               ),
 
-           
+              // 3) Bookmark
               _buildNavItem(
-                context: context,
                 index: 2,
                 label: 'Bookmark',
                 iconPath: 'assets/images/bookmarkpic.png',
                 isImage: true,
               ),
 
-            
+              // 4) Weather
               _buildNavItem(
-                context: context,
                 index: 3,
                 label: 'Weather',
                 iconPath: 'assets/images/weather.png',
@@ -75,7 +71,6 @@ class AppBottomNav extends StatelessWidget {
   }
 
   Widget _buildNavItem({
-    required BuildContext context,
     required int index,
     required String label,
     IconData? icon,

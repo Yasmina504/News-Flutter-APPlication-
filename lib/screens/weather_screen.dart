@@ -4,6 +4,7 @@ import '../models/weather_model.dart';
 import '../services/weather_service.dart';
 import '../widgets/app_bottom_nav.dart';
 import 'bookmark_screen.dart';
+import 'explore_screen.dart';
 
 class WeatherScreen extends StatefulWidget {
   const WeatherScreen({Key? key}) : super(key: key);
@@ -344,6 +345,18 @@ class _WeatherScreenState extends State<WeatherScreen> {
     return AppBottomNav(
       selectedIndex: 3,
       onItemTapped: (index) {
+        // Explore → فتح شاشة Explore
+        if (index == 1) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const ExploreScreen(),
+            ),
+          );
+          return;
+        }
+
+        // Bookmark → فتح شاشة البوك مارك
         if (index == 2) {
           Navigator.pushReplacement(
             context,

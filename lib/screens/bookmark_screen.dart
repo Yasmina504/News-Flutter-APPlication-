@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/app_bottom_nav.dart';
 import 'article_screen.dart';
+import 'explore_screen.dart';
 import 'weather_screen.dart';
 
 class BookmarkScreen extends StatefulWidget {
@@ -51,6 +52,7 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
     },
   ];
 
+ 
   Future<void> _confirmDelete(int index) async {
     final article = articles[index];
 
@@ -226,7 +228,7 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            // Header
+           
             Container(
               width: double.infinity,
               height: 60,
@@ -242,7 +244,6 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
               ),
             ),
 
-            // Articles List
             Expanded(
               child: articles.isEmpty
                   ? const Center(
@@ -337,11 +338,21 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
         ),
       ),
 
-  
       bottomNavigationBar: AppBottomNav(
         selectedIndex: selectedIndex,
         onItemTapped: (index) {
-      
+       
+          if (index == 1) {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ExploreScreen(),
+              ),
+            );
+            return;
+          }
+
+         
           if (index == 3) {
             Navigator.pushReplacement(
               context,
@@ -352,7 +363,7 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
             return;
           }
 
-        
+         
           setState(() {
             selectedIndex = index;
           });
