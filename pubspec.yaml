@@ -1,0 +1,47 @@
+name: news
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.19.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  shared_preferences: ^2.0.18
+  dio: ^5.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/people-collaborating-with-tech- (1) 1.png
+    - assets/images/Vector.png
+    - assets/images/Ellipse 1.png
+    - assets/images/pic1.jpg
+    - assets/images/pic2.jpg
+    - assets/images/pic3.jpg
+    - assets/images/pic4.jpg
+    - assets/images/pic5.jpg
+    - assets/images/pic6.jpg
+    - assets/images/pic7.jpg
+    - assets/images/TabBar-item.png
+    - assets/images/weather.png
+    - assets/images/map.png
+    - assets/images/bookmarkpic.png
+    - assets/images/Humidity.png
+    - assets/images/UV Index.png
+    - assets/images/sun.png
+    - assets/images/Fahrenheit.png
+    - assets/images/Pressure.png
